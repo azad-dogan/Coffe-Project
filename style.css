@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: 0.2s all;
+}
+
+/* ROOT */
+/* root css hafızasında sabit değerler tutmaya yarayan bir sözde sınıftır*/
+
+/*rotta veri berirleyip ilerde kullanırsak burada belirlediğimiz bir değişkeni belirlediğimizde var() ile kullandığımız her yerde değişiklik olur*/
+:root {
+    --main-color: #d3ad7f;
+    --black-color: #13131a;
+    --bg-color: #010103;
+    --border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    font-family: 'roboto', sans-serif;
+
+}
+
+html {
+    overflow-x: hidden;
+
+    font-size: 10px;
+
+    /* normalde 1rem= 16px HTML font-size değeri vererek rem'in temsil edeceği değeri temsil edebiliriz*/
+
+    /* 
+        1 rem => 16px
+        font-size: 10px;
+
+        1rem => 10px;
+    */
+
+    /* sayfa içi elementler arası kaymayı yumuşatan komut */
+
+    scroll-behavior: smooth;
+}
+
+
+
+/* çıkan scrolbarın kapladığı alanı düzenle */
+html::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+
+/* scrolbarın arkapılanını görünmez yapma */
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+
+}
+
+/* scrolbarın tuttuğumuz kısmı düzenleriz */
+html::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5rem;
+
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    font-size: 1.7rem;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    scale: 1.1;
+}
+
+section {
+    padding: 4rem 7%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+
+/*------------- genel stillendirme bitiş*/
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 6%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+}
+
+header .logo img {
+    height: 6rem;
+    border-radius: 50px;
+}
+
+.icons {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    gap: 5px;
+
+}
+
+.navbar a,
+.navbar-mobile a {
+    color: white;
+    font-size: 1.6rem;
+}
+
+.navbar a:hover,
+.navbar-mobile a:hover {
+    color: var(--main-color);
+    border-bottom: var(--border);
+}
+
+/* mobil navbar özellikleri */
+
+
+
+.navbar-mobile {
+    /* position fixed ekranı kaydırdığınızda sizinle beraber takip eden
+    her türlü element içindir */
+
+    /* relative absolute ise sabit bir elementin üstüne başka bir
+    elementi tam istediğiniz yere konumlandırmak için */
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+
+    background-color: rgba(0, 0, 0, 0.897);
+    border-left: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: 1s all;
+
+
+}
+
+/* hidden clası verip kaldırarak elementin görünmesini engelleyebiliriz */
+.hidden {
+    /* gizliyken ekranın sağ tarafına sakladık */
+    transform: translateX(120%);
+    opacity: 0;
+}
+
+.navbar-mobile a {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.navbar-mobile button{
+    position: absolute;
+    left: -5rem;
+     top: 1rem;
+
+    font-size: 3rem;
+    background-color: transparent;
+    color: white;
+    border: var(--border);
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+}
+
+
+
+/* home */
+
+.home {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url('./images/home.jpg');
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    align-items: center;
+    padding: 0 10vw;
+
+    /* position: relative; */
+}
+
+/* .layer{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} */
+
+
+.home .content {
+    max-width: 60rem;
+    /* position: relative;
+    z-index: 10; */
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+
+    font-weight: lighter;
+    color: aliceblue;
+}
+
+/* home bitiş about başlangıç*/
+
+
+/* resim ve yazı kısmını kaplayan genel satır kapsayıcısı*/
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* about içerisindeki resim kapsayıcısı*/
+
+.about .row .image {
+    flex: 1;
+    flex-grow: 1;
+    flex-basis: 45rem;
+}
+
+/* resmin kendisi*/
+
+.about .row img {
+    width: 100%;
+}
+
+/* yazoları içeren content kapsayıcısı*/
+
+.about .row .content {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+
+
+
+/* ebout bitiş menu başlangıç */
+
+
+
+.menu .box-container {
+    display: grid;
+
+    /* ekstra mevcut alana göre eğer yeni bie stunun sığabileceği kadar yer mevcutsa yeni stun oluşturan */
+    /*eğer alan çok daraltıyorsa stun eksiltip boşta kalan alanı geriye kalan stunlara dağıtan komut*/
+
+
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box {
+    border: var(--border);
+    padding: 5rem;
+    text-align: center;
+    transition: all .4s;
+}
+
+.menu .box-container h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .price {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .price span {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.menu .box-container .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.menu .box-container .box:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* menu bitiş products başlangıç*/
+
+
+
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+
+.products .box-container .product-box {
+    border: var(--border);
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .product-box image {
+    padding: 2.5rem 0;
+}
+
+
+.products .box-container .product-box .image img {
+    height: 25rem;
+    width: 25rem;
+
+}
+
+.products .box-container .product-box .content h3 {
+    font-size: 2.5rem;
+}
+
+.products .box-container .product-box .content .stars {
+    padding: 1.5rem;
+}
+
+.products .box-container .product-box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.products .box-container .product-box .content .price {
+    font-size: 2.5rem;
+}
+
+.products .box-container .product-box .content .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+
+/* PRODUCTS BİTİŞ REVİEWS BAŞLANGIÇ */
+
+
+.reviews .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+
+.reviews .box-container .review-box {
+    border: var(--border);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.reviews .box-container .review-box img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.reviews .box-container .review-box p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #ccc;
+    padding: 2rem 0;
+}
+
+
+.reviews .box-container .review-box h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.reviews .box-container .review-box .stars i {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+
+
+
+/* reviews bitiş haritalar başlangıç */
+
+
+.contact-heading {
+    padding-top: 3rem;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.contact .map {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 45rem;
+    height: 70vh;
+}
+
+
+.contact form {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 45rem;
+
+    background-color: var(--black-color);
+    border: var(--border);
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.contact form h1 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    border: var(--border);
+    align-items: center;
+    padding-left: 2rem;
+    gap: 2rem;
+    height: 5rem;
+}
+
+.contact form .input-box i {
+    font-size: 2rem;
+}
+
+.contact form .input-box input {
+    height: 100%;
+    flex: 1;
+    background-color: transparent;
+    color: white;
+    padding: 2rem 0;
+}
+
+.contact form .input-box input::placeholder {
+    color: white;
+}
+
+.contact .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact .btn-container .btn {
+    width: 200px;
+}
+
+.contact .btn-container .btn:hover {
+    scale: 0.95;
+}
+
+
+
+
+/* contact bitiş blogs başlangıç */
+
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+
+.blogs .box-container .blog-box {
+    border: var(--border);
+
+}
+
+.blogs .box-container .blog-box .image {
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.blogs .box-container .blog-box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s;
+}
+
+/* blox-box a hover yaptığımda resim büyüsün */
+
+
+.blogs .box-container .blog-box:hover .image img {
+    scale: 1.2;
+
+}
+
+.blogs .box-container .blog-box .content {
+    padding: 2rem;
+}
+
+.blogs .box-container .blog-box .content a {
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.blogs .box-container .blog-box .content a:hover {
+    color: var(--main-color);
+}
+
+.blogs .box-container .blog-box .content span {
+    color: var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.5rems;
+
+}
+
+.blogs .box-container .blog-box .content p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+/*  BLOGS BİTİŞ FOOTER BAŞLANGIÇ */
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    gap: 2rem;
+    background-color: var(--black-color);
+}
+
+footer .icons {
+    font-size: 2.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+footer .icons i {
+    border: var(--border);
+    width: 5rem;
+    height: 5rem;
+    /* flexli ortaya hizolama komutunun 1 bir satır daha kısa hali*/
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+footer .icons i:hover {
+    background-color: var(--main-color);
+}
+
+footer .links {
+    display: flex;
+    font-size: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+footer .links a {
+    padding: 1rem 2rem;
+    border: var(--border);
+    color: white;
+
+}
+
+footer .links a:hover {
+    background-color: var(--main-color);
+}
+
+footer p {
+    font-size: 2rem;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+footer p span {
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+/* responsive design*/
+
+/*mobil cihazlarda düzgün görünüm*/
+/* breakpoint (kırılım noktası)  */
+
+@media (max-width: 800px) {
+    header {
+        padding: 1.5rem 2rem;
+
+    }
+
+    .icons {
+        display: flex;
+        font-size: 2rem;
+    }
+
+    header .navbar {
+        display: none;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+
+    .home .content p {
+        font-weight: 300;
+    }
+
+    .about .row .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .about .row .content p {
+        font-size: 1.3rem;
+
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+        /* 1 remin temsil ettiği değeri %50 azaltıyoruz (1rem=5px oluyor) */
+    }
+}

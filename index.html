@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <!-- logo -->
+        <a href="^#" class="logo">
+            <img src="./images/logo.jpg" alt="">
+        </a>
+
+        <!-- navbar -->
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Products</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="#blogs">Blogs</a>
+        </nav>
+
+
+
+
+        <!-- mobil menu -->
+        <nav id="navbar" class="navbar-mobile hidden">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Products</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="#blogs">Blogs</a>
+            <button id="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </nav>
+
+
+        <!-- icons -->
+        <!-- css ile ekranküçüldüğünde gözüken büyüdüğünde gözükmeyen bir ikonlar divi oluşturalım-->
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i id="menu-btn" class="fa-solid fa-bars"></i>
+
+
+        </div>
+    </header>
+
+    <!-- HOME -->
+
+    <!-- section arkapılanı resim olan kapsayıcı olacak -->
+    <section class="home" id="home">
+        <!-- content ise bu kapsayıcının içinde elementleri ortalayan kapsayıcı olacak -->
+        <div class="content">
+            <h3>Fresh Coffe in the Morning</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis placeat cum a labore facere incidunt
+                ipsa provident vitae consequatur quod quis illum, et est aut quae aspernatur. Debitis, pariatur
+            </p>
+            <button class="btn">Get Yours Now</button>
+        </div>
+
+        <div class="layer"></div>
+    </section>
+
+    <!-- ABOUT  US  -->
+
+    <section class="about" id="about">
+        <!-- heading -->
+        <h1 class="heading"><span>ABOUT</span> US</h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="./images/about-us.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>What Makes Our Coffe Special</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident unde id optio suscipit,
+                    voluptates libero quis laudantium incidunt, odit sed nulla aliquam. Earum quas dolorum velit facere
+                    autem laborum voluptates, temporibus id. Assumenda consectetur facilis nobis inventore nulla
+                    voluptates, labore totam itaque voluptas ab repellendus tempora reiciendis officia amet est.</p>
+                <button class="btn">Learn More</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MENU -->
+
+    <section class="menu" id="menu">
+        <h1 class="heading">OUR <span>MENU</span></h1>
+
+        <!-- box container -->
+        <div class="box-container">
+            <div class="box">
+                <img src="./images/menu-1.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+            <div class="box">
+                <img src="./images/menu-2.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+            <div class="box">
+                <img src="./images/menu-3.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+            <div class="box">
+                <img src="./images/menu-4.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+            <div class="box">
+                <img src="./images/menu-5.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+            <div class="box">
+                <img src="./images/menu-6.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+            <div class="box">
+                <img src="./images/menu-7.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+            <div class="box">
+                <img src="./images/menu-8.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+            <div class="box">
+                <img src="./images/menu-9.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+            <div class="box">
+                <img src="./images/menu-10.jpg" alt="">
+                <!-- title -->
+                <h3>Tasty and Healthy</h3>
+                <!-- price -->
+                <div class="price">$14.99 <span>$19.99</span></div>
+                <!-- button -->
+                <button class="btn">Add To Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <section class="products" id="products">
+        <!-- title -->
+        <h1 class="heading">OUR <span>PRODUCTS</span></h1>
+
+        <div class="box-container">
+            <!-- products box -->
+            <div class="product-box">
+                <div class="image">
+                    <img src="./images/product-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Fresh Coffe</h3>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <!-- price -->
+                    <div class="price">
+                        $12.99 <span>$20.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- products box -->
+            <div class="product-box">
+                <div class="image">
+                    <img src="./images/product-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Fresh Coffe</h3>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <!-- price -->
+                    <div class="price">
+                        $12.99 <span>$20.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- products box -->
+            <div class="product-box">
+                <div class="image">
+                    <img src="./images/product-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Fresh Coffe</h3>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <!-- price -->
+                    <div class="price">
+                        $12.99 <span>$20.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- REVİEWS-->
+
+    <section class="reviews" id="reviews">
+        <!-- title -->
+        <h1 class="heading"><span>CUSTOMER</span>REVİEWS</h1>
+
+        <div class="box-container">
+            <div class="review-box">
+                <!-- feedback -->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quisquam consectetur soluta,
+                    incidunt corporis recusandae .</p>
+                <!-- image -->
+                <img src="./images/user-2.jpg" alt="">
+                <!-- name -->
+                <h3>Sedat A.</h3>
+                <!-- STARS -->
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="review-box">
+                <!-- feedback -->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quisquam consectetur soluta,
+                    incidunt corporis recusandae .</p>
+                <!-- image -->
+                <img src="./images/user-2.jpg" alt="">
+                <!-- name -->
+                <h3>Sedat A.</h3>
+                <!-- STARS -->
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="review-box">
+                <!-- feedback -->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quisquam consectetur soluta,
+                    incidunt corporis recusandae .</p>
+                <!-- image -->
+                <img src="./images/user-2.jpg" alt="">
+                <!-- name -->
+                <h3>Sedat A.</h3>
+                <!-- STARS -->
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+    <!-- TODO HARİTA KISMI YAPILACAK -->
+
+    <!-- başlık -->
+
+    <h1 class="heading contact-heading">CONTACT <span>US</span></h1>
+
+    <section class="contact" id="contact">
+
+        <!-- google haritalar -->
+        <iframe src="https://maps.google.com/maps?q=istanbul&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+            frameborder="0" scrolling="no" class="map">
+        </iframe>
+        <div></div>
+
+        <form>
+            <h1>Get In Touch</h1>
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Your Name">
+            </div>
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="Your Email">
+            </div>
+            <div class="input-box">
+                <i class="fa-solid fa-phone"></i>
+                <input type="text" placeholder="Your Phone">
+            </div>
+
+            <div class="btn-container">
+                <button class="btn">Send</button>
+            </div>
+
+        </form>
+
+
+
+
+
+
+
+    </section>
+
+
+    <!-- BLOGS -->
+
+    <section class="blogs" id="blogs">
+        <!-- title -->
+        <h1 class="heading">OUR <SPAn>BLOGS</SPAn></h1>
+
+        <div class="box-container">
+            <div class="blog-box">
+                <!-- image -->
+                <div class="image">
+                    <img src="./images/blog-1.jpg" alt="">
+                </div>
+                <!-- content -->
+                <div class="content">
+                    <!-- blog name -->
+                    <a href="#">Tasty and Refreshing Coffee</a>
+                    <!-- date -->
+                    <span>By Admin - 01.11.2025</span>
+                    <!-- description-->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio sed repellendus, numquam
+                        excepturi non voluptas eum amet provident ex.</p>
+                    <!-- button -->
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="blog-box">
+                <!-- image -->
+                <div class="image">
+                    <img src="./images/blog-2.jpg" alt="">
+                </div>
+                <!-- content -->
+                <div class="content">
+                    <!-- blog name -->
+                    <a href="#">Tasty and Refreshing Coffee</a>
+                    <!-- date -->
+                    <span>By Admin - 01.11.2025</span>
+                    <!-- description-->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio sed repellendus, numquam
+                        excepturi non voluptas eum amet provident ex.</p>
+                    <!-- button -->
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="blog-box">
+                <!-- image -->
+                <div class="image">
+                    <img src="./images/blog-3.jpg" alt="">
+                </div>
+                <!-- content -->
+                <div class="content">
+                    <!-- blog name -->
+                    <a href="#">Tasty and Refreshing Coffee</a>
+                    <!-- date -->
+                    <span>By Admin - 01.11.2025</span>
+                    <!-- description-->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio sed repellendus, numquam
+                        excepturi non voluptas eum amet provident ex.</p>
+                    <!-- button -->
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Products</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="#blogs">Blogs</a>
+        </div>
+        <p>
+            Created By <span>Udemig</span> | All Rights Reserved
+        </p>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>
