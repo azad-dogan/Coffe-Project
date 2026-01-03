@@ -5,3 +5,4 @@
 ## technologies used (HTML CSS JavaScript)
 
 ### It is visually appealing, practical, and provides a comfortable experience with its color combination.
+![screen.gif](screen.gif)
